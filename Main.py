@@ -1,6 +1,8 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 
+from Interface import Window
+
 G = nx.Graph()
 
 # Vertex
@@ -35,3 +37,5 @@ nx.draw_networkx(G, pos=nx.spring_layout(G, weight='weight'))
 plt.axis('off')
 # display the drawn graph
 plt.show()
+
+Window()
