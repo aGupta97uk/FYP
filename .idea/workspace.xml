@@ -9,8 +9,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/FYP$Interface.coverage" NAME="Interface Coverage Results" MODIFIED="1548130947691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FYP$Main.coverage" NAME="Main Coverage Results" MODIFIED="1548027874830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FYP$Interface.coverage" NAME="Interface Coverage Results" MODIFIED="1548708135973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FYP$Main.coverage" NAME="Main Coverage Results" MODIFIED="1548134052850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -27,29 +27,40 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Interface.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.44606164">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Main.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="518">
+                  <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+                  <folding>
+                    <element signature="e#0#21#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Interface.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="467">
+                  <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+                  <folding>
+                    <element signature="e#0#21#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -73,13 +84,14 @@
       <list>
         <option value="$PROJECT_DIR$/venv/Interfacce.py" />
         <option value="$PROJECT_DIR$/Main.py" />
+        <option value="$PROJECT_DIR$/Graph.py" />
         <option value="$PROJECT_DIR$/Interface.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="2376" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="219" />
+    <option name="y" value="126" />
     <option name="width" value="1120" />
     <option name="height" value="800" />
   </component>
@@ -95,54 +107,6 @@
             <path>
               <item name="FYP" type="b2602c69:ProjectViewProjectNode" />
               <item name="FYP" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FYP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FYP" type="462c0819:PsiDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FYP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="FYP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (FYP) &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="FYP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (FYP) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FYP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (FYP) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FYP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (FYP) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="networkx" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FYP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (FYP) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="networkx" type="462c0819:PsiDirectoryNode" />
-              <item name="drawing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FYP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (FYP) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="networkx-2.2-py3.7.egg-info" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -236,12 +200,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547396837131</updated>
-      <workItem from="1547823960569" duration="32011000" />
+      <workItem from="1547823960569" duration="61002000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32011000" />
+    <option name="totallyTimeSpent" value="61002000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -268,14 +232,14 @@
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49946696" weight="0.32917964" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.46908316" side_tool="true" weight="0.32917964" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.53091687" visible="true" weight="0.2897196" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.53091687" visible="true" weight="0.2886812" />
       <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.4989339" weight="0.32917964" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" sideWeight="0.4992248" weight="0.32995737" />
-      <window_info anchor="right" x="930" y="470" width="741" height="403" id="Run" order="4" sideWeight="0.49561402" visible="true" weight="0.32942432" />
-      <window_info anchor="right" id="SciView" order="5" sideWeight="0.50438595" side_tool="true" visible="true" weight="0.32942432" />
+      <window_info anchor="right" id="Database" order="3" sideWeight="0.4992248" weight="0.15298508" />
+      <window_info anchor="right" x="930" y="470" width="741" height="403" id="Run" order="4" sideWeight="0.49561402" visible="true" weight="0.20095949" />
+      <window_info anchor="right" id="SciView" order="5" sideWeight="0.50438595" side_tool="true" weight="0.25373134" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17643923" />
@@ -283,37 +247,26 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Debug" order="2" weight="0.3991684" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.39875388" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="5" weight="0.32952183" />
+      <window_info anchor="bottom" id="TODO" order="5" sideWeight="0.49946696" weight="0.32917964" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49946696" weight="0.32917964" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.46855012" side_tool="true" visible="true" weight="0.32917964" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.5314499" visible="true" weight="0.32917964" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.46908316" side_tool="true" weight="0.32917964" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.53091687" visible="true" weight="0.2897196" />
       <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.4989339" weight="0.32917964" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" sideWeight="0.4992248" weight="0.32995737" />
-      <window_info anchor="right" x="930" y="470" width="741" height="403" id="Run" order="4" sideWeight="0.49690402" visible="true" weight="0.32942432" />
-      <window_info anchor="right" id="SciView" order="5" sideWeight="0.503096" side_tool="true" visible="true" weight="0.32942432" />
+      <window_info anchor="right" x="930" y="470" width="741" height="403" id="Run" order="4" sideWeight="0.49561402" visible="true" weight="0.25373134" />
+      <window_info anchor="right" id="SciView" order="5" sideWeight="0.50438595" side_tool="true" visible="true" weight="0.25373134" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Interface.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/1551711580/_tkinter.py">
@@ -327,13 +280,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/tkinter/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47719">
-          <caret line="2810" column="22" selection-start-line="2810" selection-start-column="18" selection-end-line="2810" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -351,13 +297,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/networkx/drawing/nx_pylab.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="610" selection-start-line="610" selection-end-line="610" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Interfacce.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -366,19 +305,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/networkx/drawing/nx_pylab.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="610" selection-start-line="610" selection-end-line="610" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/matplotlib/backends/_backend_tk.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="210" selection-start-line="210" selection-end-line="210" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/tkinter/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="2404" selection-start-line="2404" selection-end-line="2404" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="31" />
+        <state relative-caret-position="518">
+          <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Interface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="467">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,41 +1,71 @@
+import networkx as nx
 import tkinter as tk
 from tkinter import ttk
-
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from matplotlib.figure import Figure
 import matplotlib
 matplotlib.use("TkAgg")
-from matplotlib.backends.backend_tkagg import *
-from matplotlib.figure import Figure
+
+import matplotlib.pyplot as plt
 
 
-class Window(tk.Tk):
+class Window:
 
-    def __init__(self):
+    def __init__(self, parent):
 
-        tk.Tk.__init__(self)
+        self.myParent = parent
+        self.main_container = tk.Frame(parent, background="bisque")
+        self.main_container.pack(side="top", fill="both", expand=True)
 
-        container = tk.Frame(self)
+        # Left Frame
+        self.left_frame = tk.Frame(self.main_container, background="green")
+        self.left_frame.pack(side="left", fill="both", expand=True)
 
-        container.grid_rowconfigure(10, weight=1)
-        container.grid_columnconfigure(10, weight=1)
+        # Left Frame - Top
+        self.left_frame_top = tk.Frame(self.left_frame, background="blue")
+        self.left_frame_top.pack(side="top", fill="both", expand=True)
 
-        # Label
-        lab = tk.Label(self, text="Label")
-        lab.grid(row=5, column=5)
+        # Left Frame - Bottom
+        self.left_frame_bottom = tk.Frame(self.left_frame, background="red")
+        self.left_frame_bottom.pack(side="bottom", fill="both", expand=True)
 
-        # Button
-        button1 = ttk.Button(self, text="Button 1")
-        button1.grid(row=1, column=1)
+        # Right Frame
+        self.right_frame = tk.Frame(self.main_container, background="yellow")
+        self.right_frame.pack(side="right", fill="both", expand=True)
 
-        # Figure
-        fig = Figure(figsize=(5, 5), dpi=100)
-        a = fig.add_subplot(111)
-        a.plot([1, 2, 3, 4, 5, 6, 7, 8], [5, 6, 1, 3, 8, 9, 3, 6])
+        self.draw_graph()
 
-        # Embedding the figure into the canvas
-        canvas = FigureCanvasTkAgg(fig, self)
+    # Drawing graph in the top left frame
+    # Setting some graph properties
+    def draw_graph(self):
+
+        # Embedding the figure
+        f = Figure(figsize=(1, 1), dpi=100)
+        a = f.add_subplot(111)
+
+        g = nx.path_graph(8)
+        pos = nx.spring_layout(g)
+        nx.draw(g, pos, ax=a)
+
+        canvas = FigureCanvasTkAgg(f, master=self.left_frame_top)
         canvas.draw()
-        canvas.get_tk_widget().grid(row=0, column=0)
+        canvas.get_tk_widget().pack(side="top", fill="both", expand=True)
 
 
-root = Window()
+root = tk.Tk()
+
+# Setting some window properties
+root.title("Graph")
+# Setting the window size based on the screen size
+root.pack_propagate(0)
+root.update()
+screen_width = root.winfo_screenwidth()
+print(screen_width)
+screen_height = root.winfo_screenheight()
+print(screen_height)
+print(screen_width, " ", screen_height)
+root.geometry('%sx%s' % (screen_width + 1412, screen_height))
+root.update()
+root.geometry('500x500')
+my_Window = Window(root)
 root.mainloop()
