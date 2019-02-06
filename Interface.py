@@ -1,6 +1,6 @@
 import networkx as nx
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk, messagebox
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
 import matplotlib
@@ -66,39 +66,52 @@ class Window:
         self.lab_nov.grid(row=1, column=0, pady=5, in_=self.right_frame2_top)
 
         # Entry - Number of Vertices
-        num_vertices = tk.StringVar()
-        self.entry_nov = tk.Entry(self.right_frame2_top, textvariable=num_vertices)
+        self.verticesNum = tk.StringVar()
+        self.entry_nov = tk.Entry(self.right_frame2_top, textvariable=self.verticesNum)
         self.entry_nov.grid(row=1, column=1)
         self.entry_nov.grid_rowconfigure(1, weight=1)
 
-        def prn():
-
-            a = num_vertices.get()
-            print("Number should be here ->" + a)
-
         # Button - Generate Random Graph
-        # TODO: Add the lambda command to generate the graph based on the number of vertices entered
+        # TODO: Add the command to generate the graph based on the number of vertices entered
         self.button_grg = tk.Button(self.right_frame2_top, text="Generate Graph", bd=3,
-                                    command=prn())
+                                    command=lambda: self.getVertices())
         self.button_grg.grid(row=2, column=1)
         self.button_grg.grid_rowconfigure(1, weight=1)
 
-        # TODO: Border the generate random graph section
+        # self.draw_graph()
 
-        self.draw_graph()
+    # Getting the number of vertices for the random graph
+    def getVertices(self):
 
-    # # Get the input from the entry
-    # def rnd_graph(self):
-    #
+        string_vertices = self.verticesNum.get()
+
+        # TODO: Perform following checks (Input Validation)
+        # 1. Has a number been entered
+        # 2. Has a positive number and in the range of 2-10
+        try:
+            num_vertices = int(string_vertices)
+            print("Input number value is: ", num_vertices)
+
+            if num_vertices >= 2:
+                print("DRAW THE GRAPH NOW")
+                self.draw_graph(num_vertices)
+            elif num_vertices < 2:
+                print("The graph must contain at least 2 vertices")
+                messagebox.showerror("INPUT ERROR", "The graph must contain at least 2 vertices.")
+            elif num_vertices < 0:
+                print("The minimum number of vertices must be 2.")
+        except ValueError:
+            print("Entered value is not a number")
+            messagebox.showerror("INPUT ERROR", "A number must be entered.")
 
     # Drawing graph in the top left frame
-    def draw_graph(self):
+    def draw_graph(self, vertices):
 
         # Embedding the figure
         f = Figure(figsize=(1, 1), dpi=100)
         a = f.add_subplot(111)
 
-        g = nx.path_graph(8)
+        g = nx.path_graph(vertices)
         pos = nx.spring_layout(g)
         nx.draw(g, pos, ax=a)
 
@@ -110,9 +123,6 @@ class Window:
     # Get the number of vertices entered by the user and draw a
     # random graph based on the number
     # def random_graph(self):
-
-
-
 
 
 root = tk.Tk()
