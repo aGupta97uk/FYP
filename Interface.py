@@ -8,47 +8,48 @@ matplotlib.use("TkAgg")
 
 import matplotlib.pyplot as plt
 
+root = tk.Tk()
 
 class Window:
 
     def __init__(self, parent):
 
         self.myParent = parent
-        self.main_container = tk.Frame(parent, background="bisque")
+        self.main_container = tk.Frame(parent)
         self.main_container.pack(side="top", fill="both", expand=True)
 
         # Left Frame
-        self.left_frame = tk.Frame(self.main_container, background="green")
+        self.left_frame = tk.Frame(self.main_container)
         self.left_frame.pack(side="left", fill="both", expand=True)
 
         # Left Frame - Top
-        self.left_frame_top = tk.Frame(self.left_frame, background="blue")
+        self.left_frame_top = tk.Frame(self.left_frame, relief="ridge", bd=20, borderwidth=3, pady=2, padx=2)
         self.left_frame_top.pack(side="top", fill="both", expand=True)
 
         # Left Frame - Bottom
-        self.left_frame_bottom = tk.Frame(self.left_frame, background="red")
+        self.left_frame_bottom = tk.Frame(self.left_frame)
         self.left_frame_bottom.pack(side="bottom", fill="both", expand=True)
 
         # Left Frame - Bottom2
-        self.left_frame_bottom2 = tk.Frame(self.left_frame_bottom, background="orange")
+        self.left_frame_bottom2 = tk.Frame(self.left_frame_bottom)
         self.left_frame_bottom2.pack(side="bottom", fill="both", expand=True)
 
         # Text area to print out the results of the algorithm run
         # FIXME: This makes the top and bottom frames resize, making the top frame smaller
         # This happens only when Text is used. Label is fine
-        self.left_frame_bottom2_text = tk.Label(self.left_frame_bottom2, background="black")
+        self.left_frame_bottom2_text = tk.Label(self.left_frame_bottom2)
         self.left_frame_bottom2_text.pack(side="bottom", fill="both", expand=True)
 
         # Right Frame
-        self.right_frame = tk.Frame(self.main_container, background="yellow")
+        self.right_frame = tk.Frame(self.main_container)
         self.right_frame.pack(side="right", fill="both", expand=True)
 
         # Right Frame2
-        self.right_frame2 = tk.Frame(self.right_frame, background="pink")
+        self.right_frame2 = tk.Frame(self.right_frame)
         self.right_frame2.pack(side="right", fill="both", expand=True)
 
         # Right Frame2 - Top
-        self.right_frame2_top = tk.Frame(self.right_frame2, relief="ridge", background="bisque", bd=20, borderwidth=3,
+        self.right_frame2_top = tk.Frame(self.right_frame2, relief="ridge", bd=20, borderwidth=3,
                                          padx=5, pady=5)
         self.right_frame2_top.grid(row=0, column=0, sticky="nsew")
         self.right_frame2.grid_rowconfigure(4, weight=1)
@@ -66,52 +67,83 @@ class Window:
         self.lab_nov.grid(row=1, column=0, pady=5, in_=self.right_frame2_top)
 
         # Entry - Number of Vertices
-        self.verticesNum = tk.StringVar()
-        self.entry_nov = tk.Entry(self.right_frame2_top, textvariable=self.verticesNum)
+        self.vertices_num = tk.StringVar()
+        self.entry_nov = tk.Entry(self.right_frame2_top, textvariable=self.vertices_num)
+        # self.entry_nov.bind('<Return>', self.on_return())
         self.entry_nov.grid(row=1, column=1)
         self.entry_nov.grid_rowconfigure(1, weight=1)
 
+        # Label - Number of Edges
+        # FIXME: The font size - not changing
+        self.lab_noe = tk.Label(self.right_frame2_top, text="Number of Edges:",
+                                font="14")
+        self.lab_noe.grid(row=2, column=0, pady=5, in_=self.right_frame2_top)
+
+        # Entry - Number of Edges
+        self.edges_num = tk.StringVar()
+        self.entry_noe = tk.Entry(self.right_frame2_top, textvariable=self.edges_num)
+        # self.entry_nov.bind('<Return>', self.on_return())
+        self.entry_noe.grid(row=2, column=1)
+        self.entry_noe.grid_rowconfigure(1, weight=1)
+
         # Button - Generate Random Graph
-        # TODO: Add the command to generate the graph based on the number of vertices entered
         self.button_grg = tk.Button(self.right_frame2_top, text="Generate Graph", bd=3,
-                                    command=lambda: self.getVertices())
-        self.button_grg.grid(row=2, column=1)
+                                    command=lambda: self.get_vertices())
+        self.button_grg.grid(row=3, column=1)
         self.button_grg.grid_rowconfigure(1, weight=1)
 
         # self.draw_graph()
 
+    # def on_return(self):
+    #     print("Return Pressed")
+    #     self.entry_nov.delete(0, 'end')
+
     # Getting the number of vertices for the random graph
-    def getVertices(self):
+    # Performs validation checks on the user input to make sure the input entered is correct
+    # TODO: Add a upper limit to the input validation
+    # FIXME: A new graph is drawn every time underneath the old one
+    def get_vertices(self):
 
-        string_vertices = self.verticesNum.get()
+        string_vertices = self.vertices_num.get()
+        string_edges = self.edges_num.get()
 
-        # TODO: Perform following checks (Input Validation)
-        # 1. Has a number been entered
-        # 2. Has a positive number and in the range of 2-10
         try:
             num_vertices = int(string_vertices)
-            print("Input number value is: ", num_vertices)
+            print("Vertices number value is: ", num_vertices)
 
-            if num_vertices >= 2:
+            num_edges = int(string_edges)
+            print("Edges number value is: ", num_edges)
+
+            # TODO: Improve error handling
+            if num_vertices >= 2 and num_edges >= 1:
                 print("DRAW THE GRAPH NOW")
-                self.draw_graph(num_vertices)
-            elif num_vertices < 2:
+                self.draw_graph(num_vertices, num_edges)
+            elif 0 < num_vertices < 2:
                 print("The graph must contain at least 2 vertices")
-                messagebox.showerror("INPUT ERROR", "The graph must contain at least 2 vertices.")
+                messagebox.showerror("VERTEX INPUT ERROR", "The graph must contain at least 2 vertices.")
             elif num_vertices < 0:
-                print("The minimum number of vertices must be 2.")
+                print("The minimum number of vertices cannot be a negative number.")
+                messagebox.showerror("VERTEX INPUT ERROR", "The minimum number of vertices cannot be a negative number.")
+            elif 0 <= num_edges < 1:
+                print("The graph must contain at least 1 edge")
+                messagebox.showerror("EDGE INPUT ERROR", "The graph must contain at least 1 edge.")
+            elif num_edges < 0:
+                print("The minimum number of edges cannot be a negative number.")
+                messagebox.showerror("EDGE INPUT ERROR", "The minimum number of edges cannot be a negative number.")
         except ValueError:
             print("Entered value is not a number")
             messagebox.showerror("INPUT ERROR", "A number must be entered.")
 
     # Drawing graph in the top left frame
-    def draw_graph(self, vertices):
+    def draw_graph(self, vertices, edges):
+
+        # Delete the previous graph
 
         # Embedding the figure
-        f = Figure(figsize=(1, 1), dpi=100)
+        f = Figure(figsize=(1.5, 1.5), dpi=100)
         a = f.add_subplot(111)
 
-        g = nx.path_graph(vertices)
+        g = nx.dense_gnm_random_graph(vertices, edges)
         pos = nx.spring_layout(g)
         nx.draw(g, pos, ax=a)
 
@@ -119,13 +151,6 @@ class Window:
         canvas.draw()
         canvas.get_tk_widget().pack(fill="both", expand=True)
 
-    # TODO: a random graph method which draws the graph
-    # Get the number of vertices entered by the user and draw a
-    # random graph based on the number
-    # def random_graph(self):
-
-
-root = tk.Tk()
 
 # Setting some window properties
 root.title("Graph")
