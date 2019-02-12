@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 
 root = tk.Tk()
 
+
 class Window:
 
     def __init__(self, parent):
@@ -25,20 +26,18 @@ class Window:
         # Left Frame - Top
         self.left_frame_top = tk.Frame(self.left_frame, relief="ridge", bd=20, borderwidth=3, pady=2, padx=2)
         self.left_frame_top.pack(side="top", fill="both", expand=True)
+        self.left_frame_top.update_idletasks()
 
         # Left Frame - Bottom
         self.left_frame_bottom = tk.Frame(self.left_frame)
         self.left_frame_bottom.pack(side="bottom", fill="both", expand=True)
 
-        # Left Frame - Bottom2
-        self.left_frame_bottom2 = tk.Frame(self.left_frame_bottom)
-        self.left_frame_bottom2.pack(side="bottom", fill="both", expand=True)
-
         # Text area to print out the results of the algorithm run
         # FIXME: This makes the top and bottom frames resize, making the top frame smaller
         # This happens only when Text is used. Label is fine
-        self.left_frame_bottom2_text = tk.Label(self.left_frame_bottom2)
-        self.left_frame_bottom2_text.pack(side="bottom", fill="both", expand=True)
+        self.left_frame_bottom2_text = tk.Text(self.left_frame_bottom, background="Light Grey", relief="ridge",
+                                               bd=20, borderwidth=3, pady=2, padx=2)
+        self.left_frame_bottom2_text.pack(side="bottom", fill='both', expand=True, anchor="center")
 
         # Right Frame
         self.right_frame = tk.Frame(self.main_container)
@@ -88,23 +87,18 @@ class Window:
 
         # Button - Generate Random Graph
         self.button_grg = tk.Button(self.right_frame2_top, text="Generate Graph", bd=3,
-                                    command=lambda: self.get_vertices())
+                                    command=lambda: self.get_graph())
         self.button_grg.grid(row=3, column=1)
         self.button_grg.grid_rowconfigure(1, weight=1)
-
-        # self.draw_graph()
-
-    # def on_return(self):
-    #     print("Return Pressed")
-    #     self.entry_nov.delete(0, 'end')
 
     # Getting the number of vertices for the random graph
     # Performs validation checks on the user input to make sure the input entered is correct
     # TODO: Add a upper limit to the input validation
     # FIXME: A new graph is drawn every time underneath the old one
-    def get_vertices(self):
+    def get_graph(self):
 
-        string_vertices = self.vertices_num.get()
+        string_vertices \
+            = self.vertices_num.get()
         string_edges = self.edges_num.get()
 
         try:
@@ -114,22 +108,33 @@ class Window:
             num_edges = int(string_edges)
             print("Edges number value is: ", num_edges)
 
-            # TODO: Improve error handling
-            if num_vertices >= 2 and num_edges >= 1:
+            # Only accepted case where the graph is plotted.
+            if (1 < num_vertices < 9) and (0 < num_edges < 65):
                 print("DRAW THE GRAPH NOW")
                 self.draw_graph(num_vertices, num_edges)
-            elif 0 < num_vertices < 2:
-                print("The graph must contain at least 2 vertices")
-                messagebox.showerror("VERTEX INPUT ERROR", "The graph must contain at least 2 vertices.")
+            # Vertices Input Error
+            elif num_vertices == 0:
+                print("Number of vertices entered: ", num_vertices)
+                messagebox.showerror("Vertex Input Error", "There must be at least 2 vertices in the graph.")
+            elif num_vertices == 1:
+                print("Number of vertices entered: ", num_vertices)
+                messagebox.showerror("Vertex Input Error", "There must be at least 2 vertices in the graph.")
             elif num_vertices < 0:
-                print("The minimum number of vertices cannot be a negative number.")
-                messagebox.showerror("VERTEX INPUT ERROR", "The minimum number of vertices cannot be a negative number.")
-            elif 0 <= num_edges < 1:
-                print("The graph must contain at least 1 edge")
-                messagebox.showerror("EDGE INPUT ERROR", "The graph must contain at least 1 edge.")
+                print("Number of vertices entered: ", num_vertices)
+                messagebox.showerror("Vertex Input Error", "The graph cannot contain a negative number of vertices.")
+            elif num_vertices > 8:
+                print("Number of vertices entered: ", num_vertices)
+                messagebox.showerror("Vertex Input Error", "The graph cannot more than 8 vertices.")
+            # Edges Input Errors
+            elif num_edges == 0:
+                print("Number of edges entered: ", num_edges)
+                messagebox.showerror("Edge Input Error", "The graph must have at least 1 edge.")
             elif num_edges < 0:
-                print("The minimum number of edges cannot be a negative number.")
-                messagebox.showerror("EDGE INPUT ERROR", "The minimum number of edges cannot be a negative number.")
+                print("Number of edges entered: ", num_edges)
+                messagebox.showerror("Edge Input Error", "The graph cannot contain a negative number of edges.")
+            elif num_edges > 64:
+                print("Number of edges entered: ", num_edges)
+                messagebox.showerror("Edge Input Error", "The graph cannot more than 64 edges.")
         except ValueError:
             print("Entered value is not a number")
             messagebox.showerror("INPUT ERROR", "A number must be entered.")
@@ -137,19 +142,29 @@ class Window:
     # Drawing graph in the top left frame
     def draw_graph(self, vertices, edges):
 
-        # Delete the previous graph
-
         # Embedding the figure
-        f = Figure(figsize=(1.5, 1.5), dpi=100)
+        f = Figure(figsize=(1, 1), dpi=100)
         a = f.add_subplot(111)
 
-        g = nx.dense_gnm_random_graph(vertices, edges)
-        pos = nx.spring_layout(g)
-        nx.draw(g, pos, ax=a)
+        # TODO: Show the labels on the vertices in the graph
+
+        # TODO: Change the type of graph so only a complete graph is generated
+        graph = nx.dense_gnm_random_graph(vertices, edges)
+        pos = nx.random_layout(graph)
+        nx.draw(graph, pos, ax=a, with_labels=True)
 
         canvas = FigureCanvasTkAgg(f, master=self.left_frame_top)
         canvas.draw()
         canvas.get_tk_widget().pack(fill="both", expand=True)
+
+        print("Number of edges in graph: ", nx.info(graph))
+
+        num_vertices = nx.number_of_nodes(graph)
+
+        num_edges = nx.number_of_edges(graph)
+
+        print("Number of Vertices = ", num_vertices)
+        print("Number of Edges = ", num_edges)
 
 
 # Setting some window properties
