@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Interface.py" line="34" />
-    <bookmark url="file://$PROJECT_DIR$/Interface.py" line="39" />
+    <bookmark url="file://$PROJECT_DIR$/Interface.py" line="33" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d95ed418-a400-4c7a-97dc-df68a993b2e0" name="Default Changelist" comment="" />
@@ -15,7 +14,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/FYP$Interface.coverage" NAME="Interface Coverage Results" MODIFIED="1548874010160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FYP$mayavi2_spring.coverage" NAME="mayavi2_spring Coverage Results" MODIFIED="1549594504195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
-    <SUITE FILE_PATH="coverage/FYP$Main.coverage" NAME="Main Coverage Results" MODIFIED="1549732147617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FYP$Main.coverage" NAME="Main Coverage Results" MODIFIED="1552068729691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -36,34 +35,35 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="3" />
-          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="17" />
           <entry key="dummy" value="3" />
-          <entry key="py" value="8867" />
+          <entry key="py" value="13599" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="8884" />
+          <entry key="Python" value="13616" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="3" />
+          <entry key="py" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="3" />
+          <entry key="Python" value="8" />
         </counts>
       </usages-collector>
     </session>
@@ -72,14 +72,14 @@
     <favorites_list name="FYP" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.40337226">
+    <splitter split-orientation="horizontal" split-proportion="0.41727093">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Main.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="503">
-                  <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+                  <caret line="40" selection-start-line="40" selection-end-line="40" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -94,11 +94,12 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Interface.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1037">
-                  <caret line="145" selection-start-line="145" selection-end-line="146" selection-end-column="30" />
+                <state relative-caret-position="445">
+                  <caret line="74" column="58" selection-start-line="74" selection-start-column="58" selection-end-line="74" selection-end-column="58" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
-                    <marker date="1549827591110" expanded="true" signature="6526:6531" ph="..." />
+                    <marker date="1552070552559" expanded="true" signature="7426:7431" ph="..." />
+                    <marker date="1552070552559" expanded="true" signature="8537:8538" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -120,6 +121,8 @@
       <find>Window</find>
       <find>frame</find>
       <find>`</find>
+      <find>plt</find>
+      <find>left_frame_top</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -142,8 +145,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2384" />
-    <option name="y" value="-23" />
+    <option name="x" value="404" />
+    <option name="y" value="-17" />
     <option name="width" value="1120" />
     <option name="height" value="800" />
   </component>
@@ -153,6 +156,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,7 +168,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -295,29 +298,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48656717" visible="true" weight="0.18496802" />
-      <window_info x="7" y="384" width="331" height="323" id="Structure" order="1" sideWeight="0.51343286" side_tool="true" visible="true" weight="0.18496802" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48208955" visible="true" weight="0.1913646" />
+      <window_info x="7" y="384" width="331" height="323" id="Structure" order="1" sideWeight="0.5179104" side_tool="true" visible="true" weight="0.1913646" />
       <window_info id="Favorites" order="2" sideWeight="0.5119403" side_tool="true" weight="0.18283582" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32952183" />
-      <window_info anchor="bottom" id="Debug" order="2" weight="0.39875388" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.3981289" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" sideWeight="0.5143923" weight="0.32848233" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.5063966" weight="0.32848233" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.4792111" side_tool="true" weight="0.33471933" />
-      <window_info active="true" anchor="bottom" x="578" y="806" width="684" height="373" id="Terminal" order="10" sideWeight="0.5207889" visible="true" weight="0.3035343" />
-      <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.4989339" weight="0.32848233" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.48134327" side_tool="true" weight="0.3035343" />
+      <window_info active="true" anchor="bottom" x="578" y="806" width="684" height="373" id="Terminal" order="10" sideWeight="0.51865673" visible="true" weight="0.3035343" />
+      <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.49840087" weight="0.32848233" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" sideWeight="0.4992248" weight="0.15298508" />
-      <window_info anchor="right" x="930" y="470" width="741" height="403" id="Run" order="4" sideWeight="0.49226007" weight="0.24946696" />
+      <window_info anchor="right" x="930" y="470" width="741" height="403" id="Run" order="4" sideWeight="0.49226007" weight="0.1391258" />
       <window_info anchor="right" id="SciView" order="5" sideWeight="0.50773996" side_tool="true" weight="0.13539445" />
     </layout>
   </component>
@@ -375,24 +377,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/matplotlib/figure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="2365" selection-start-line="2365" selection-end-line="2365" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Interfacce.py" />
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="57" lean-forward="true" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graph.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/matplotlib/backends/_backend_tk.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -421,6 +406,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Graph.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/networkx/drawing/nx_pylab.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -428,23 +416,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Interface.py">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/matplotlib/figure.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="145" selection-start-line="145" selection-end-line="146" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1549827591110" expanded="true" signature="6526:6531" ph="..." />
-          </folding>
+        <state relative-caret-position="199">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="503">
-          <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="1075" column="22" lean-forward="true" selection-start-line="1075" selection-start-column="22" selection-end-line="1075" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interface.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="74" column="58" selection-start-line="74" selection-start-column="58" selection-end-line="74" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1552070552559" expanded="true" signature="7426:7431" ph="..." />
+            <marker date="1552070552559" expanded="true" signature="8537:8538" ph="..." />
           </folding>
         </state>
       </provider>
