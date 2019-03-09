@@ -47,13 +47,13 @@
         <counts>
           <entry key="Python Console" value="17" />
           <entry key="dummy" value="3" />
-          <entry key="py" value="13599" />
+          <entry key="py" value="15696" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="13616" />
+          <entry key="Python" value="15713" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -78,8 +78,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Main.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="503">
-                  <caret line="40" selection-start-line="40" selection-end-line="40" />
+                <state relative-caret-position="442">
+                  <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -94,12 +94,12 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Interface.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="445">
-                  <caret line="74" column="58" selection-start-line="74" selection-start-column="58" selection-end-line="74" selection-end-column="58" />
+                <state relative-caret-position="425">
+                  <caret line="88" column="87" lean-forward="true" selection-start-line="88" selection-start-column="87" selection-end-line="88" selection-end-column="87" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
-                    <marker date="1552070552559" expanded="true" signature="7426:7431" ph="..." />
-                    <marker date="1552070552559" expanded="true" signature="8537:8538" ph="..." />
+                    <marker date="1552165369809" expanded="true" signature="7986:7991" ph="..." />
+                    <marker date="1552165369809" expanded="true" signature="9303:9304" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -299,6 +299,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48208955" visible="true" weight="0.1913646" />
       <window_info x="7" y="384" width="331" height="323" id="Structure" order="1" sideWeight="0.5179104" side_tool="true" visible="true" weight="0.1913646" />
@@ -423,16 +424,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -447,14 +438,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Interface.py">
+    <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="74" column="58" selection-start-line="74" selection-start-column="58" selection-end-line="74" selection-end-column="58" />
+        <state relative-caret-position="442">
+          <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <marker date="1552070552559" expanded="true" signature="7426:7431" ph="..." />
-            <marker date="1552070552559" expanded="true" signature="8537:8538" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interface.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="88" column="87" lean-forward="true" selection-start-line="88" selection-start-column="87" selection-end-line="88" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1552165369809" expanded="true" signature="7986:7991" ph="..." />
+            <marker date="1552165369809" expanded="true" signature="9303:9304" ph="..." />
           </folding>
         </state>
       </provider>

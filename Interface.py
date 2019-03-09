@@ -1,7 +1,7 @@
 import networkx as nx
 import tkinter as tk
-from tkinter import ttk, messagebox
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from tkinter import messagebox
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 import matplotlib.pyplot as plt
 import matplotlib
 matplotlib.use("TkAgg")
@@ -19,19 +19,32 @@ class Window:
 
         # Left Frame
         self.left_frame = tk.Frame(self.main_container, width=800, relief="ridge", bd=20, borderwidth=3,
-                                         padx=5, pady=5, background='white')
+                                   background='white')
         self.left_frame.pack(side="left", fill="both", expand=True)
 
         # Right Frame
-        self.right_frame = tk.Frame(self.main_container, background='blue')
+        self.right_frame = tk.Frame(self.main_container, background='black')
         self.right_frame.pack(side="right", fill="both", expand=True)
 
         # Right Frame2 - Top
         self.right_frame2_top = tk.Frame(self.right_frame, relief="ridge", bd=20, borderwidth=3,
-                                         padx=5, pady=5, background='green')
-        self.right_frame2_top.grid(row=0, column=1, sticky="nsew")
+                                         padx=5, pady=5)
+        self.right_frame2_top.grid(row=0, column=0, sticky="nsew")
         self.right_frame.grid_rowconfigure(0, weight=1)
-        self.right_frame.grid_columnconfigure(1, weight=1)
+        self.right_frame.grid_columnconfigure(0, weight=1)
+
+        # # Right Frame2 - Middle
+        # self.right_frame2_middle = tk.Frame(self.right_frame, relief="ridge", bd=20, borderwidth=3,
+        #                                     padx=5, pady=5)
+        # self.right_frame2_middle.grid(row=1, column=0, sticky="nsew")
+        # self.right_frame.grid_rowconfigure(1, weight=1)
+        # self.right_frame.grid_columnconfigure(0, weight=1)
+
+        # Right Frame2 - Bottom
+        self.right_frame2_bottom = tk.Frame(self.right_frame, relief="ridge", bd=20, borderwidth=3)
+        self.right_frame2_bottom.grid(row=2, column=0, sticky="nsew")
+        self.right_frame.grid_rowconfigure(2, weight=1)
+        self.right_frame.grid_columnconfigure(0, weight=1)
 
         # Label - Generate Random Graph
         # FIXME: The font size - not changing
@@ -70,41 +83,39 @@ class Window:
         self.button_grg.grid(row=3, column=1)
         self.button_grg.grid_rowconfigure(1, weight=1)
 
+        # Label - Algorithms
+        self.lab_alg = tk.Label(self.right_frame2_top, text="Algorithms",
+                                font="24")
+        self.lab_alg.grid(row=8, column=0, padx=10, pady=10, in_=self.right_frame2_top)
+
+        # Text area to print out the results of the algorithm run
+        # FIXME: This makes the top and bottom frames resize, making the top frame smaller
+        self.right_frame2_bottom_text = tk.Text(master=self.right_frame2_bottom, relief="ridge",
+                                                background="Light Grey", wrap="word", state="normal",
+                                                padx=0, pady=0)
+        self.right_frame2_bottom_text.pack(side="right", fill="both", expand=True)
+        # Adding a scrollbar for the text box.
+        self.right_frame2_bottom_scr = tk.Scrollbar(master=self.right_frame2_bottom_text)
+        self.right_frame2_bottom_scr.pack(side="right", fill="y")
+        self.right_frame2_bottom_text.config(state="disabled")
+
+        # Setting figure properties
+        scr_width = root.winfo_screenwidth()
+        scr_height = root.winfo_screenheight()
+        scr_dpi = root.winfo_fpixels("1i")
+        print("Screen Width: ", scr_width, "Screen Height: ", scr_height, "DPI: ", scr_dpi)
+
         # Creating the Figure
         fig_num = 1
-        self.figure = plt.figure(num=fig_num, dpi=100, clear=True)
+        self.figure = plt.figure(num=fig_num, clear=True)
         self.ax = self.figure.add_subplot(111)
 
         # Defining the canvas
         self.canvas = FigureCanvasTkAgg(self.figure, master=self.left_frame)
+        self.canvas.get_tk_widget().configure(background="red", highlightcolor="blue", highlightbackground="black")
+        # Defining the toolbar
+        self.toolbar = NavigationToolbar2Tk(self.canvas, self.left_frame)
 
-    #
-    #     # Right Frame2 - Middle
-    #     self.right_frame2_mid = tk.Frame(self.right_frame2, relief="ridge", bd=20, borderwidth=3,
-    #                                      padx=5, pady=5)
-    #     self.right_frame2_mid.grid(row=4, column=0, sticky="nsew")
-    #     self.right_frame2.grid_rowconfigure(4, weight=1)
-    #     self.right_frame2.grid_columnconfigure(0, weight=1)
-    #
-    #     # Label - Algorithms
-    #     self.lab_alg = tk.Label(self.right_frame2_mid, text="Algorithms",
-    #                             font="24")
-    #     self.lab_alg.grid(row=0, column=0, padx=10, pady=10, in_=self.right_frame2_mid)
-    #
-    #     # Right Frame2 - Bottom
-    #     self.right_frame2_bottom = tk.Frame(self.right_frame2, relief="ridge", bd=20, borderwidth=3,
-    #                                      padx=5, pady=5)
-    #     self.right_frame2_bottom.grid(row=8, column=0, sticky="nsew")
-    #     self.right_frame2.grid_rowconfigure(4, weight=1)
-    #     self.right_frame2.grid_columnconfigure(0, weight=1)
-    #
-    #     # # Text area to print out the results of the algorithm run
-    #     # # FIXME: This makes the top and bottom frames resize, making the top frame smaller
-    #     # # This happens only when Text is used. Label is fine
-    #     # self.right_frame2_bottom_text = tk.Text(self.right_frame2_bottom, background="Light Grey", relief="ridge",
-    #     #                                        bd=20, borderwidth=3, pady=2, padx=2)
-    #     # self.right_frame2_bottom_text.grid(side="bottom", fill='both', expand=True, anchor="center")
-    #
     # Getting the number of vertices for the random graph
     # Performs validation checks on the user input to make sure the input entered is correct
     # TODO: Add a upper limit to the input validation
@@ -157,6 +168,7 @@ class Window:
     def draw_graph(self, vertices, edges):
 
         self.ax.clear()
+        self.toolbar.update()
 
         # TODO: Change the type of graph so only a complete graph is generated
         # NetworkX Graph
@@ -168,6 +180,8 @@ class Window:
         nx.draw_networkx_edges(graph, pos, width=2)
         # Draw labels
         nx.draw_networkx_labels(graph, pos, font_size=10, font_family='sans-serif')
+        # Tight Figure Layout
+        plt.tight_layout()
         # Turn off the axis
         plt.axis('off')
 
@@ -175,9 +189,10 @@ class Window:
         self.canvas.draw()
         # Positioning the canvas using pack
         self.canvas.get_tk_widget().pack(side="left", anchor="center", fill="both", expand=True)
-
-        print("Number of edges in graph: ", nx.info(graph))
-
+        # Positioning the toolbar
+        self.toolbar.pack(self.left_frame, side="top")
+        graph_info = nx.info(graph)
+        print("Number of edges in graph: ", graph_info)
         num_vertices = nx.number_of_nodes(graph)
         num_edges = nx.number_of_edges(graph)
 
