@@ -21,10 +21,12 @@ class Window:
         self.left_frame = tk.Frame(self.main_container, width=800, relief="ridge", bd=20, borderwidth=3,
                                    background='white')
         self.left_frame.pack(side="left", fill="both", expand=True)
+        self.left_frame.pack_propagate(0)
 
         # Right Frame
         self.right_frame = tk.Frame(self.main_container, background='black')
         self.right_frame.pack(side="right", fill="both", expand=True)
+        self.right_frame.pack_propagate(0)
 
         # Right Frame2 - Top
         self.right_frame2_top = tk.Frame(self.right_frame, relief="ridge", bd=20, borderwidth=3,
@@ -32,13 +34,7 @@ class Window:
         self.right_frame2_top.grid(row=0, column=0, sticky="nsew")
         self.right_frame.grid_rowconfigure(0, weight=1)
         self.right_frame.grid_columnconfigure(0, weight=1)
-
-        # # Right Frame2 - Middle
-        # self.right_frame2_middle = tk.Frame(self.right_frame, relief="ridge", bd=20, borderwidth=3,
-        #                                     padx=5, pady=5)
-        # self.right_frame2_middle.grid(row=1, column=0, sticky="nsew")
-        # self.right_frame.grid_rowconfigure(1, weight=1)
-        # self.right_frame.grid_columnconfigure(0, weight=1)
+        self.right_frame.grid_propagate(0)
 
         # Right Frame2 - Bottom
         self.right_frame2_bottom = tk.Frame(self.right_frame, relief="ridge", bd=20, borderwidth=3)
@@ -107,12 +103,13 @@ class Window:
 
         # Creating the Figure
         fig_num = 1
-        self.figure = plt.figure(num=fig_num, clear=True)
+        # TODO: The figsize could be causing the resizing issue
+        self.figure = plt.figure(num=fig_num, figsize=((scr_width / scr_dpi) * 0.6, scr_height / scr_dpi), clear=True,
+                                 facecolor="white")
         self.ax = self.figure.add_subplot(111)
 
         # Defining the canvas
         self.canvas = FigureCanvasTkAgg(self.figure, master=self.left_frame)
-        self.canvas.get_tk_widget().configure(background="red", highlightcolor="blue", highlightbackground="black")
         # Defining the toolbar
         self.toolbar = NavigationToolbar2Tk(self.canvas, self.left_frame)
 
@@ -188,7 +185,7 @@ class Window:
         # Drawing the figure using the renderer
         self.canvas.draw()
         # Positioning the canvas using pack
-        self.canvas.get_tk_widget().pack(side="left", anchor="center", fill="both", expand=True)
+        self.canvas.get_tk_widget().pack(side="left", fill="both", expand=True)
         # Positioning the toolbar
         self.toolbar.pack(self.left_frame, side="top")
         graph_info = nx.info(graph)
