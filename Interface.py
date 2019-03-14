@@ -126,8 +126,6 @@ class Window:
         output_string += "Random Graph Generate: " + string_edges \
                          + " edge(s) and " + string_vertices + " vertice(s)\n"
 
-        self.redirect(output_string)
-
         try:
             num_vertices = int(string_vertices)
             # print("Vertices number value is: ", num_vertices)
@@ -138,33 +136,42 @@ class Window:
             # Only accepted case where the graph is plotted.
             if (1 < num_vertices < 9) and (0 < num_edges < 65):
                 # print("DRAW THE GRAPH NOW")
+                self.redirect(output_string)
                 self.draw_graph(num_vertices, num_edges)
             # Vertices Input Error
             elif num_vertices == 0:
                 # print("Number of vertices entered: ", num_vertices)
                 messagebox.showerror("Vertex Input Error", "There must be at least 2 vertices in the graph.")
+                self.redirect("Vertex Input Error: There must be at least 2 vertices in the graph.\n")
             elif num_vertices == 1:
                 # print("Number of vertices entered: ", num_vertices)
                 messagebox.showerror("Vertex Input Error", "There must be at least 2 vertices in the graph.")
+                self.redirect("Vertex Input Error: There must be at least 2 vertices in the graph.\n")
             elif num_vertices < 0:
                 # print("Number of vertices entered: ", num_vertices)
                 messagebox.showerror("Vertex Input Error", "The graph cannot contain a negative number of vertices.")
+                self.redirect("Vertex Input Error: The graph cannot contain a negative number of vertices.\n")
             elif num_vertices > 8:
                 # print("Number of vertices entered: ", num_vertices)
                 messagebox.showerror("Vertex Input Error", "The graph cannot more than 8 vertices.")
+                self.redirect("Vertex Input Error: The graph cannot more than 8 vertices.\n")
             # Edges Input Errors
             elif num_edges == 0:
                 # print("Number of edges entered: ", num_edges)
                 messagebox.showerror("Edge Input Error", "The graph must have at least 1 edge.")
+                self.redirect("Edge Input Error: The graph must have at least 1 edge.\n")
             elif num_edges < 0:
                 # print("Number of edges entered: ", num_edges)
                 messagebox.showerror("Edge Input Error", "The graph cannot contain a negative number of edges.")
+                self.redirect("Edge Input Error: The graph cannot contain a negative number of edges.\n")
             elif num_edges > 64:
                 # print("Number of edges entered: ", num_edges)
                 messagebox.showerror("Edge Input Error", "The graph cannot more than 64 edges.")
+                self.redirect("Edge Input Error: The graph cannot more than 64 edges.\n")
         except ValueError:
             # print("Entered value is not a number")
             messagebox.showerror("INPUT ERROR", "A number must be entered.")
+            self.redirect("INPUT ERROR: A number must be entered.\n")
 
     # Drawing graph in the top left frame
     def draw_graph(self, vertices, edges):
@@ -194,12 +201,7 @@ class Window:
         # Positioning the toolbar
         self.toolbar.pack(self.left_frame, side="bottom")
         graph_info = nx.info(graph)
-        # print("Number of edges in graph: ", graph_info)
-        num_vertices = nx.number_of_nodes(graph)
-        num_edges = nx.number_of_edges(graph)
-
-        # print("Number of Vertices = ", num_vertices)
-        # print("Number of Edges = ", num_edges)
+        self.redirect(graph_info)
 
     def redirect(self, input_string):
 
