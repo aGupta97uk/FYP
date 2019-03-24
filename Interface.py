@@ -1,9 +1,9 @@
 import tkinter as tk
 import sys
-from tkinter import messagebox
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
-from RNDGraph import get_graph
+from RNDGraph import get_graph, graph_properties
 import matplotlib.pyplot as plt
+from matplotlib.figure import SubplotParams
 import matplotlib
 matplotlib.use("TkAgg")
 
@@ -69,7 +69,7 @@ class Window:
         self.entry_noe.grid(row=2, column=1)
         self.entry_noe.grid_rowconfigure(1, weight=1)
 
-        # Button - Generate Random Graph -------------------------------Working On------------
+        # Button - Generate Random Graph
         self.button_grg = tk.Button(self.lab_grg, text="Generate Graph", bd=3,
                                     command=lambda: get_graph(self))
         self.button_grg.grid(row=3, column=1)
@@ -81,6 +81,25 @@ class Window:
         self.lab_alg.grid(row=1, column=0, padx=10, pady=10, sticky="nsew")
         self.right_frame2_top.rowconfigure(1, weight=1)
         self.right_frame2_top.columnconfigure(0, weight=1)
+
+        # Button - Graph Coloring
+        self.button_gc = tk.Button(self.lab_alg, text="Graph Coloring", bd=3)
+        self.button_gc.grid(row=0, column=0)
+        self.lab_alg.rowconfigure(0, weight=1)
+        self.lab_alg.columnconfigure(0, weight=1)
+
+        # LabelFrame - Graph Properties
+        self.graph = tk.LabelFrame(self.right_frame2_top, text="Properties", font="24")
+        self.graph.grid(row=2, column=0, padx=10, pady=10, sticky="nsew")
+        self.right_frame2_top.rowconfigure(2, weight=1)
+        self.right_frame2_top.columnconfigure(0, weight=1)
+
+        # Button - Print out some graph properties
+        self.button_prp = tk.Button(self.graph, text="Graph Properties", bd=3,
+                                    command=lambda: graph_properties(self))
+        self.button_prp.grid(row=0, column=0)
+        self.graph.rowconfigure(0, weight=1)
+        self.graph.columnconfigure(0, weight=1)
 
         # Right Frame2 - Bottom
         self.right_frame2_bottom = tk.Frame(self.right_frame, relief="ridge", bd=20, borderwidth=3)
@@ -100,14 +119,15 @@ class Window:
                                                 padx=0, pady=0)
         self.right_frame2_bottom_text.pack(side="right", fill="both", expand=True)
         # Adding a scrollbar for the text box.
+        # TODO: Scrollbar not working properly
         self.right_frame2_bottom_scr = tk.Scrollbar(master=self.right_frame2_bottom_text)
         self.right_frame2_bottom_scr.pack(side="right", fill="y")
         self.right_frame2_bottom_text.config(state="disabled")
 
         # Creating the Figure
         fig_num = 1
-        self.figure = plt.figure(num=fig_num, figsize=((scr_width / scr_dpi) * 0.6, scr_height / scr_dpi), clear=True,
-                                 facecolor="white")
+        self.figure = plt.figure(num=fig_num, figsize=((scr_width / scr_dpi) * 0.6, scr_height / scr_dpi),
+                                 clear=True, facecolor="white")
         self.ax = self.figure.add_subplot(111)
 
         # Defining the canvas

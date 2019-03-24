@@ -2,6 +2,7 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/Interface.py" line="36" />
+    <bookmark url="file://$PROJECT_DIR$/Interface.py" line="71" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d95ed418-a400-4c7a-97dc-df68a993b2e0" name="Default Changelist" comment="" />
@@ -16,7 +17,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/FYP$Interface.coverage" NAME="Interface Coverage Results" MODIFIED="1548874010160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FYP$mayavi2_spring.coverage" NAME="mayavi2_spring Coverage Results" MODIFIED="1549594504195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
-    <SUITE FILE_PATH="coverage/FYP$Main.coverage" NAME="Main Coverage Results" MODIFIED="1552068729691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FYP$Main.coverage" NAME="Main Coverage Results" MODIFIED="1552986302143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -49,27 +50,27 @@
         <counts>
           <entry key="Python Console" value="28" />
           <entry key="dummy" value="13" />
-          <entry key="gitignore" value="38" />
-          <entry key="py" value="18374" />
+          <entry key="gitignore" value="45" />
+          <entry key="py" value="19648" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="51" />
-          <entry key="Python" value="18402" />
+          <entry key="PLAIN_TEXT" value="58" />
+          <entry key="Python" value="19676" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitattributes" value="1" />
-          <entry key="gitignore" value="3" />
-          <entry key="py" value="20" />
+          <entry key="gitignore" value="4" />
+          <entry key="py" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="20" />
+          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="Python" value="23" />
         </counts>
       </usages-collector>
     </session>
@@ -78,27 +79,27 @@
     <favorites_list name="FYP" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.54141814">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Interface.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="441">
-                  <caret line="119" column="60" lean-forward="true" selection-start-line="119" selection-start-column="60" selection-end-line="119" selection-end-column="60" />
+                <state relative-caret-position="17">
+                  <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
                   <folding>
                     <element signature="e#0#20#0" expanded="true" />
-                    <marker date="1552606181725" expanded="true" signature="5520:5521" ph="..." />
+                    <marker date="1553454113794" expanded="true" signature="6463:6464" ph="..." />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/.gitignore">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+                <state relative-caret-position="51">
+                  <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
                 </state>
               </provider>
             </entry>
@@ -110,12 +111,12 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/RNDGraph.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="520">
-                  <caret line="90" selection-start-line="90" selection-end-line="90" />
+                <state relative-caret-position="564">
+                  <caret line="99" column="23" lean-forward="true" selection-start-line="99" selection-start-column="23" selection-end-line="99" selection-end-column="23" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
-                    <marker date="1552607348453" expanded="true" signature="89:4069" ph="..." />
-                    <marker date="1552607348453" expanded="true" signature="110:115" ph="..." />
+                    <marker date="1552988373442" expanded="true" signature="152:4184" ph="..." />
+                    <marker date="1552988373442" expanded="true" signature="174:179" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -139,13 +140,16 @@
       <find>`</find>
       <find>plt</find>
       <find>left_frame_top</find>
-      <find>tool</find>
       <find>text</find>
       <find>pack</find>
       <find>insert</find>
       <find>print</find>
       <find>ValueError</find>
       <find>-bd</find>
+      <find>al</find>
+      <find>info</find>
+      <find>scroll</find>
+      <find>tool</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -157,12 +161,13 @@
         <option value="$PROJECT_DIR$/venv/Interfacce.py" />
         <option value="$PROJECT_DIR$/Graph.py" />
         <option value="$PROJECT_DIR$/Random Graph Generation.py" />
-        <option value="$PROJECT_DIR$/Main.py" />
-        <option value="$PROJECT_DIR$/Interface.py" />
         <option value="$PROJECT_DIR$/GitIgnore.gitignore" />
-        <option value="$PROJECT_DIR$/RNDGraph.py" />
         <option value="$PROJECT_DIR$/venv/Lib/site-packages/pylab.py" />
+        <option value="$PROJECT_DIR$/Main.py" />
+        <option value="$PROJECT_DIR$/RNDGraph.py" />
+        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Interface.py" />
       </list>
     </option>
   </component>
@@ -173,8 +178,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="404" />
-    <option name="y" value="-17" />
+    <option name="x" value="460" />
+    <option name="y" value="-16" />
     <option name="width" value="1120" />
     <option name="height" value="800" />
   </component>
@@ -192,24 +197,6 @@
               <item name="FYP" type="b2602c69:ProjectViewProjectNode" />
               <item name="FYP" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="FYP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FYP" type="462c0819:PsiDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FYP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FYP" type="462c0819:PsiDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FYP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FYP" type="462c0819:PsiDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -222,7 +209,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/venv" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -350,8 +337,8 @@
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4791045" visible="true" weight="0.195629" />
-      <window_info x="7" y="384" width="331" height="323" id="Structure" order="1" sideWeight="0.52089554" side_tool="true" visible="true" weight="0.195629" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47919464" visible="true" weight="0.1337953" />
+      <window_info x="7" y="384" width="331" height="323" id="Structure" order="1" sideWeight="0.52080536" side_tool="true" visible="true" weight="0.1337953" />
       <window_info id="Favorites" order="2" sideWeight="0.52089554" side_tool="true" weight="0.195629" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32952183" />
@@ -363,7 +350,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.5063966" weight="0.32848233" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.48134327" side_tool="true" weight="0.3035343" />
-      <window_info anchor="bottom" x="578" y="806" width="684" height="373" id="Terminal" order="10" sideWeight="0.51865673" visible="true" weight="0.3035343" />
+      <window_info active="true" anchor="bottom" x="578" y="806" width="684" height="373" id="Terminal" order="10" sideWeight="0.51865673" visible="true" weight="0.22557172" />
       <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.49840087" weight="0.32848233" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -485,16 +472,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/tkinter/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
@@ -507,18 +484,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GitIgnore.gitignore" />
     <entry file="file://$PROJECT_DIR$/venv/.gitignore" />
-    <entry file="file://$PROJECT_DIR$/RNDGraph.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="90" selection-start-line="90" selection-end-line="90" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1552607348453" expanded="true" signature="89:4069" ph="..." />
-            <marker date="1552607348453" expanded="true" signature="110:115" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/pylab.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -529,21 +494,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Interface.py">
+    <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="119" column="60" lean-forward="true" selection-start-line="119" selection-start-column="60" selection-end-line="119" selection-end-column="60" />
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNDGraph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="99" column="23" lean-forward="true" selection-start-line="99" selection-start-column="23" selection-end-line="99" selection-end-column="23" />
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <marker date="1552606181725" expanded="true" signature="5520:5521" ph="..." />
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1552988373442" expanded="true" signature="152:4184" ph="..." />
+            <marker date="1552988373442" expanded="true" signature="174:179" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interface.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <marker date="1553454113794" expanded="true" signature="6463:6464" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

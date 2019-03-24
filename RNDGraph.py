@@ -1,10 +1,13 @@
 import networkx as nx
+import matplotlib.pyplot as plt
+from tkinter import messagebox
 from Interface import *
 import matplotlib
 matplotlib.use("TkAgg")
 
 
 def get_graph(self):
+
     string_vertices = self.vertices_num.get()
     string_edges = self.edges_num.get()
     output_string = ''
@@ -63,6 +66,7 @@ def get_graph(self):
 
 # Drawing graph in the top left frame
 def draw_graph(self, vertices, edges):
+
     self.ax.clear()
     self.toolbar.update()
 
@@ -81,10 +85,16 @@ def draw_graph(self, vertices, edges):
     # Turn off the axis
     plt.axis('off')
 
-    # # Drawing the figure using the renderer
+    # Drawing the figure using the renderer
     self.canvas.draw()
-    # # Positioning the canvas using pack
+    # Positioning the canvas using pack
     self.canvas.get_tk_widget().pack(side="left", fill="both", expand=True)
+    # Print Out some Graph info
+    global graph_info
     graph_info = nx.info(graph)
-    self.redirect(graph_info)
 
+
+def graph_properties(self):
+
+    self.redirect(graph_info)
+    self.redirect("\n")
