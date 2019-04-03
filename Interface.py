@@ -1,6 +1,7 @@
 import tkinter as tk
 import sys
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
+from tkinter.scrolledtext import ScrolledText
 from RNDGraph import get_graph, graph_properties
 import matplotlib.pyplot as plt
 from matplotlib.figure import SubplotParams
@@ -114,14 +115,11 @@ class Window:
         # print("Screen Width: ", scr_width, "Screen Height: ", scr_height, "DPI: ", scr_dpi)
 
         # Text area to print out the results of the algorithm run
-        self.right_frame2_bottom_text = tk.Text(master=self.right_frame2_bottom, relief="ridge",
-                                                background="Light Grey", wrap="word", state="normal",
-                                                padx=0, pady=0)
+        # Using the ScolledText widget because from python 3.0 onwards this is available which is very useful.
+        self.right_frame2_bottom_text = tk.scrolledtext.ScrolledText(master=self.right_frame2_bottom, relief="ridge",
+                                                                     background="Light Grey", wrap="word",
+                                                                     state="normal", padx=0, pady=0)
         self.right_frame2_bottom_text.pack(side="right", fill="both", expand=True)
-        # Adding a scrollbar for the text box.
-        # TODO: Scrollbar not working properly
-        self.right_frame2_bottom_scr = tk.Scrollbar(master=self.right_frame2_bottom_text)
-        self.right_frame2_bottom_scr.pack(side="right", fill="y")
         self.right_frame2_bottom_text.config(state="disabled")
 
         # Creating the Figure
