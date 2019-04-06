@@ -54,10 +54,10 @@ def get_graph(self):
             # print("Number of edges entered: ", num_edges)
             messagebox.showerror("Edge Input Error", "The graph cannot contain a negative number of edges.")
             self.redirect("Edge Input Error: The graph cannot contain a negative number of edges.\n")
-        elif num_edges > 64:
+        elif num_edges > 28:
             # print("Number of edges entered: ", num_edges)
-            messagebox.showerror("Edge Input Error", "The graph cannot more than 64 edges.")
-            self.redirect("Edge Input Error: The graph cannot more than 64 edges.\n")
+            messagebox.showerror("Edge Input Error", "The graph cannot more than28 edges.")
+            self.redirect("Edge Input Error: The graph cannot more than 28 edges.\n")
     except ValueError:
         # print("Entered value is not a number")
         messagebox.showerror("INPUT ERROR", "A number must be entered.")
@@ -78,12 +78,19 @@ def draw_graph(self, vertices, edges):
     nx.draw_networkx_nodes(graph, pos, ax=self.ax, node_size=700)
     # Draw Edges
     nx.draw_networkx_edges(graph, pos, width=2)
-    # Draw labels
+    # Draw labels`
     nx.draw_networkx_labels(graph, pos, font_size=10, font_family='sans-serif')
     # Tight Figure Layout
     plt.tight_layout()
     # Turn off the axis
     plt.axis('off')
+
+    # Create a file to store the list of edges
+    graph_edge_list = open("Graph.txt", "w+")
+    # Save the graph in a txt file
+    for edge_list in nx.generate_edgelist(graph, delimiter=' ', data=True):
+        graph_edge_list.write(edge_list)
+        graph_edge_list.write("\n")
 
     # Drawing the figure using the renderer
     self.canvas.draw()
@@ -98,3 +105,4 @@ def graph_properties(self):
 
     self.redirect(graph_info)
     self.redirect("\n")
+

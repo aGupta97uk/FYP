@@ -148,11 +148,12 @@ class Window:
 root.title("Graph")
 # Setting the window size based on the screen size
 root.pack_propagate(0)
-# Making the window ful-screen
-screen_width = root.winfo_screenwidth()
-screen_height = root.winfo_screenheight()
-# print(screen_width, " ", screen_height)
-root.geometry("{0}x{1}+0+0".format(screen_width, screen_height))
+# # Making the window ful-screen
+# screen_width = root.winfo_screenwidth()
+# screen_height = root.winfo_screenheight()
+# # print(screen_width, " ", screen_height)
+# root.geometry("{0}x{1}+0+0".format(screen_width, screen_height))
+root.state('zoomed')
 # Setting the focus to this window
 root.focus_set()
 root.update()
