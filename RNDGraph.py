@@ -1,6 +1,8 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 from tkinter import messagebox
+# see if this works
+# from Interface import redirect
 from Interface import *
 import matplotlib
 matplotlib.use("TkAgg")
@@ -23,7 +25,7 @@ def get_graph(self):
         # print("Edges number value is: ", num_edges)
 
         # Only accepted case where the graph is plotted.
-        if (1 < num_vertices < 9) and (0 < num_edges < 65):
+        if (1 < num_vertices < 9) and (0 < num_edges < 29):
             # print("DRAW THE GRAPH NOW")
             self.redirect(output_string)
             draw_graph(self, num_vertices, num_edges)
@@ -56,7 +58,7 @@ def get_graph(self):
             self.redirect("Edge Input Error: The graph cannot contain a negative number of edges.\n")
         elif num_edges > 28:
             # print("Number of edges entered: ", num_edges)
-            messagebox.showerror("Edge Input Error", "The graph cannot more than28 edges.")
+            messagebox.showerror("Edge Input Error", "The graph cannot more than 28 edges.")
             self.redirect("Edge Input Error: The graph cannot more than 28 edges.\n")
     except ValueError:
         # print("Entered value is not a number")
@@ -64,7 +66,7 @@ def get_graph(self):
         self.redirect("INPUT ERROR: A number must be entered.\n")
 
 
-# Drawing graph in the top left frame
+# Drawing graph in the left frame
 def draw_graph(self, vertices, edges):
 
     self.ax.clear()
@@ -85,11 +87,17 @@ def draw_graph(self, vertices, edges):
     # Turn off the axis
     plt.axis('off')
 
+    # Save the existing random graph for graph coloring.
+    # Can save the nodes as a list of distinct edges. Then call the add_edge
+    # function to recreate the exact same graph.
     # Create a file to store the list of edges
-    graph_edge_list = open("Graph.txt", "w+")
+    graph_edge_list = open("Random Graph.txt", "w+")
     # Save the graph in a txt file
-    for edge_list in nx.generate_edgelist(graph, delimiter=' ', data=True):
-        graph_edge_list.write(edge_list)
+    total_num_edges = graph.number_of_edges()
+    graph_edge_list.write(str(total_num_edges))
+    graph_edge_list.write("\n")
+    for edge in nx.generate_edgelist(graph, delimiter=' ', data=False):
+        graph_edge_list.write(edge)
         graph_edge_list.write("\n")
 
     # Drawing the figure using the renderer
@@ -100,9 +108,16 @@ def draw_graph(self, vertices, edges):
     global graph_info
     graph_info = nx.info(graph)
 
+    global nodes
+    nodes = graph.nodes()
+
 
 def graph_properties(self):
 
     self.redirect(graph_info)
+    self.redirect("\n")
+
+    self.redirect("Nodelist: ")
+    self.redirect(nodes)
     self.redirect("\n")
 
