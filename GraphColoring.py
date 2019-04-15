@@ -5,6 +5,7 @@
 import matplotlib.pyplot as plt
 import networkx as nx
 from Interface import *
+from tkinter import messagebox
 
 
 def get_gc(self):
@@ -68,7 +69,7 @@ def draw_graph(self, graph, col_list):
     # NetworkX Graph
     pos = nx.spring_layout(graph)
     # List of colors to color nodes
-    values = [col_list.get(node, "blue") for node in graph.nodes()]
+    values = [col_list.get(node, "yellow") for node in graph.nodes()]
     # Draw Graph
     nx.draw(graph, pos, ax=self.ax, node_size=700, node_color=values)
     # Draw labels
@@ -82,3 +83,40 @@ def draw_graph(self, graph, col_list):
     self.canvas.draw()
     # Positioning the canvas using pack
     self.canvas.get_tk_widget().pack(side="left", fill="both", expand=True)
+
+    global val
+    val = len(set(values))
+
+    num_colors(self)
+
+
+# Print out the number of distinct colours used to color the graph
+def num_colors(self):
+
+    self.redirect("Num colors used to color all Vertices: ")
+    self.redirect(val)
+    self.redirect("\n")
+
+
+def check_num_colors_answer(self):
+
+    user_input = self.entry_num_colors.get()
+
+    try:
+        input_answer = int(user_input)
+
+        if input_answer == val:
+            self.redirect("Correct Answer!\n")
+        elif input_answer < 0:
+            self.redirect("The number of colors cannot be less than 0.\n")
+        elif input_answer == 0:
+            self.redirect("The number of colors cannot be equal to 0.\n")
+        elif input_answer == 1:
+            self.redirect("The minimum number of colours required will always be 2.\n")
+        elif 1 < input_answer:
+            self.redirect("Incorrect Answer!\n")
+    except ValueError:
+        messagebox.showerror("INPUT ERROR", "A number must be entered.")
+        self.redirect("INPUT ERROR: A number must be entered.\n")
+
+

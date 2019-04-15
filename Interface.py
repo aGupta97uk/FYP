@@ -2,7 +2,7 @@ import tkinter as tk
 import sys
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 from RNDGraph import get_graph, graph_properties
-from GraphColoring import get_gc
+from GraphColoring import get_gc, check_num_colors_answer
 import matplotlib.pyplot as plt
 import matplotlib
 matplotlib.use("TkAgg")
@@ -155,26 +155,50 @@ class Window:
                                     command=lambda: self.back())
         self.button_bck.grid(row=0, sticky="e", padx=10, pady=0)
 
-        # # Main Code for Graph coloring UI
+        # Main Code for Graph coloring UI
         self.lab_gc = tk.LabelFrame(self.right_frame2_top_gc, text="Graph Coloring", font="24")
         self.lab_gc.grid(row=1, column=0, padx=10, pady=(0, 10), rowspan=5, sticky="nsew")
         self.right_frame2_top_gc.rowconfigure(1, weight=1)
         self.right_frame2_top_gc.columnconfigure(0, weight=1)
-        self.lab_gc.grid_propagate(0)
+        self.lab_gc.grid_propagate(False)
 
         # Make this create a new Window and present the algorithm in that window
-        self.btn_info = tk.Button(self.right_frame2_top_gc, text="How it works", bd=3)
-        self.btn_info.grid(row=0, sticky="e", padx=50, pady=0)
-        self.right_frame2_top_gc.rowconfigure(1, weight=1)
-        self.right_frame2_top_gc.columnconfigure(0, weight=1)
-        self.btn_info.grid_propagate(0)
+        self.btn_info = tk.Button(self.lab_gc, text="How it works", bd=3)
+        # self.btn_info.pack(side="bottom", anchor="sw", padx=10, pady=10, expand=False)
+        self.btn_info.grid(row=5, column=0, padx=10, pady=10, sticky="w")
+        self.lab_gc.rowconfigure(0, weight=1)
+        self.lab_gc.columnconfigure(0, weight=1)
 
         # Button to execute the graph coloring algorithm on the existing graph
-        self.btn_gc = tk.Button(self.lab_gc, text="Graph Coloring", command=lambda: get_gc(self))
-        self.btn_gc.grid(row=0, column=0, padx=5)
-        self.lab_gc.rowconfigure(1, weight=1)
-        self.lab_gc.columnconfigure(1, weight=1)
-        self.btn_gc.grid_propagate(0)
+        self.btn_gc = tk.Button(self.lab_gc, text="Graph Coloring", bd=3,
+                                command=lambda: get_gc(self))
+        # self.btn_gc.pack(side="bottom", anchor="se", padx=10, pady=10, expand=False)
+        self.btn_gc.grid(row=5, column=5, padx=10, pady=10, sticky="e")
+        self.lab_gc.rowconfigure(0, weight=1)
+        self.lab_gc.columnconfigure(0, weight=1)
+
+        # Container
+        self.container = tk.Frame(self.lab_gc, relief="groove", bd=20, borderwidth=3)
+        self.container.grid(row=0, column=0, rowspan=4, columnspan=6, padx=10, pady=10, sticky="nsew")
+        self.container.rowconfigure(0, weight=1)
+        self.container.columnconfigure(0, weight=1)
+
+        # Label
+        # TODO: Not all text is visible in the label
+        self.lab_num_colors = tk.Label(self.container, text="How many colours do you think it will "
+                                                            "take to color all vertices in this graph?",
+                                       font=12)
+        self.lab_num_colors.pack(side="top", anchor="nw", padx=10, pady=10, fill="both", expand=False)
+        self.lab_num_colors.pack_propagate(1)
+
+        # Entry
+        self.entry_num_colors = tk.Entry(self.container)
+        self.entry_num_colors.pack(side="top", anchor="n", padx=10, pady=10)
+
+        # Button
+        self.button_num_colors = tk.Button(self.container, text="Check Answer",
+                                           command=lambda: check_num_colors_answer(self))
+        self.button_num_colors.pack(side="top", anchor="n", padx=10, pady=10)
 
     def back(self):
 
