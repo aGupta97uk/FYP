@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Interface.py" line="37" />
-    <bookmark url="file://$PROJECT_DIR$/Interface.py" line="72" />
+    <bookmark url="file://$PROJECT_DIR$/Interface.py" line="36" />
+    <bookmark url="file://$PROJECT_DIR$/Interface.py" line="73" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d95ed418-a400-4c7a-97dc-df68a993b2e0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GraphColoring.py" beforeDir="false" afterPath="$PROJECT_DIR$/GraphColoring.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interface.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Random Graph.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Random Graph.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pip-selfcheck.json" afterDir="false" />
     </list>
     <ignored path=".idea/" />
     <ignored path="venv/" />
@@ -20,8 +22,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/FYP$mayavi2_spring.coverage" NAME="mayavi2_spring Coverage Results" MODIFIED="1549594504195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
     <SUITE FILE_PATH="coverage/FYP$Interface.coverage" NAME="Interface Coverage Results" MODIFIED="1548874010160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FYP$mayavi2_spring.coverage" NAME="mayavi2_spring Coverage Results" MODIFIED="1549594504195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
     <SUITE FILE_PATH="coverage/FYP$Main.coverage" NAME="Main Coverage Results" MODIFIED="1552986302143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
@@ -42,16 +44,17 @@
     <session id="1731695896">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
+          <entry key="project.closed" value="20" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="4" />
           <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.13" value="2" />
-          <entry key="project.open.time.3" value="6" />
-          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.3" value="7" />
+          <entry key="project.open.time.4" value="3" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.9" value="4" />
-          <entry key="project.opened" value="22" />
+          <entry key="project.opened" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -59,13 +62,13 @@
           <entry key="Python Console" value="33" />
           <entry key="dummy" value="13" />
           <entry key="gitignore" value="45" />
-          <entry key="py" value="31979" />
+          <entry key="py" value="41228" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="58" />
-          <entry key="Python" value="32012" />
+          <entry key="Python" value="41261" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -75,7 +78,7 @@
           <entry key="gitignore" value="5" />
           <entry key="json" value="1" />
           <entry key="md" value="1" />
-          <entry key="py" value="41" />
+          <entry key="py" value="54" />
           <entry key="txt" value="6" />
         </counts>
       </usages-collector>
@@ -84,7 +87,7 @@
           <entry key="JSON" value="1" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="12" />
-          <entry key="Python" value="42" />
+          <entry key="Python" value="55" />
         </counts>
       </usages-collector>
     </session>
@@ -93,14 +96,14 @@
     <favorites_list name="FYP" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.69875777">
+    <splitter split-orientation="horizontal" split-proportion="0.578882">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/RNDGraph.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="697">
-                  <caret line="47" column="45" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
+                <state relative-caret-position="1275">
+                  <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="47" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -112,7 +115,7 @@
             <entry file="file://$PROJECT_DIR$/Main.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="34">
-                  <caret line="2" selection-start-line="2" selection-end-line="2" />
+                  <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
                 </state>
               </provider>
             </entry>
@@ -120,11 +123,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Interface.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="443">
-                  <caret line="194" column="44" lean-forward="true" selection-start-line="194" selection-start-column="44" selection-end-line="194" selection-end-column="44" />
+                <state relative-caret-position="187">
+                  <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
                   <folding>
                     <element signature="e#0#20#0" expanded="true" />
-                    <marker date="1555292187547" expanded="true" signature="6681:6690" ph="..." />
+                    <marker date="1555460573922" expanded="true" signature="409:414" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -134,11 +137,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/RNDGraph.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="511">
-                  <caret line="123" selection-start-line="123" selection-end-line="123" />
+                <state relative-caret-position="-712">
+                  <caret line="49" column="28" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -146,18 +149,24 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/GraphColoring.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1598">
-                  <caret line="97" column="23" selection-start-line="97" selection-start-column="23" selection-end-line="97" selection-end-column="23" />
+                <state relative-caret-position="-1508">
+                  <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
                   <folding>
                     <element signature="e#153#184#0" expanded="true" />
-                    <marker date="1555203538173" expanded="true" signature="263:378" ph="..." />
-                    <marker date="1555203538173" expanded="true" signature="2826:2827" ph="..." />
-                    <marker date="1555203538173" expanded="true" signature="2972:2973" ph="..." />
-                    <marker date="1555203538173" expanded="true" signature="2972:2978" ph="..." />
+                    <marker date="1555460573912" expanded="true" signature="2776:2888" ph="..." />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageMode.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="442">
+                  <caret line="47" column="36" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="36" />
                 </state>
               </provider>
             </entry>
@@ -179,7 +188,6 @@
       <find>frame</find>
       <find>`</find>
       <find>left_frame_top</find>
-      <find>text</find>
       <find>insert</find>
       <find>print</find>
       <find>ValueError</find>
@@ -197,6 +205,9 @@
       <find>self.graph</find>
       <find>get</find>
       <find>plt</find>
+      <find>text</find>
+      <find>font</find>
+      <find>node</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -206,7 +217,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/venv/Interfacce.py" />
-        <option value="$PROJECT_DIR$/Graph.py" />
         <option value="$PROJECT_DIR$/Random Graph Generation.py" />
         <option value="$PROJECT_DIR$/GitIgnore.gitignore" />
         <option value="$PROJECT_DIR$/venv/Lib/site-packages/pylab.py" />
@@ -214,19 +224,27 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/venv/GraphColoring.py" />
         <option value="$PROJECT_DIR$/Graph Coloring.py" />
-        <option value="$PROJECT_DIR$/Main.py" />
         <option value="$PROJECT_DIR$/venv/Trial.py" />
         <option value="$PROJECT_DIR$/RNDGraph.py" />
+        <option value="$PROJECT_DIR$/venv/Graph.py" />
+        <option value="$PROJECT_DIR$/Graph.py" />
+        <option value="$PROJECT_DIR$/Main.py" />
         <option value="$PROJECT_DIR$/GraphColoring.py" />
         <option value="$PROJECT_DIR$/Interface.py" />
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="460" />
-    <option name="y" value="-17" />
-    <option name="width" value="1120" />
-    <option name="height" value="800" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -234,6 +252,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -241,11 +260,25 @@
               <item name="FYP" type="b2602c69:ProjectViewProjectNode" />
               <item name="FYP" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="FYP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="FYP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.7 (FYP) &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="FYP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.7 (FYP) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -380,24 +413,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47750866" visible="true" weight="0.13557047" />
-      <window_info x="7" y="384" width="331" height="323" id="Structure" order="1" sideWeight="0.52249134" side_tool="true" visible="true" weight="0.13557047" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47126436" visible="true" weight="0.14179105" />
+      <window_info x="7" y="384" width="331" height="323" id="Structure" order="1" sideWeight="0.52873564" side_tool="true" visible="true" weight="0.14179105" />
       <window_info id="Favorites" order="2" sideWeight="0.52089554" side_tool="true" weight="0.195629" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32952183" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4989339" weight="0.32952183" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.3981289" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="5" sideWeight="0.5788913" visible="true" weight="0.3128898" />
+      <window_info anchor="bottom" id="TODO" order="5" sideWeight="0.576226" visible="true" weight="0.2765073" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.50586355" weight="0.32848233" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.48134327" side_tool="true" weight="0.3035343" />
-      <window_info active="true" anchor="bottom" x="578" y="806" width="684" height="373" id="Terminal" order="10" sideWeight="0.42110875" side_tool="true" visible="true" weight="0.3128898" />
-      <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.49733475" weight="0.32848233" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053304" side_tool="true" weight="0.32952183" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49733475" weight="0.32848233" />
+      <window_info active="true" anchor="bottom" x="578" y="806" width="684" height="373" id="Terminal" order="11" sideWeight="0.42377397" side_tool="true" visible="true" weight="0.2765073" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -435,20 +467,9 @@
         </entry>
       </map>
     </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/1551711580/_tkinter.py" />
@@ -482,13 +503,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Downloads/mayavi2_spring.py" />
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/networkx/drawing/nx_pylab.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="610" selection-start-line="610" selection-end-line="610" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/matplotlib/figure.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
@@ -510,7 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graph.py" />
     <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/1551711580/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
@@ -530,7 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py" />
     <entry file="file://$PROJECT_DIR$/GC" />
     <entry file="file://$PROJECT_DIR$/venv/pip-selfcheck.json">
       <provider selected="true" editor-type-id="text-editor" />
@@ -570,51 +582,71 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/Trial.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/tkinter/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="1625" column="8" selection-start-line="1625" selection-start-column="8" selection-end-line="1625" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Graph.py" />
+    <entry file="file://$PROJECT_DIR$/Graph.py" />
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageTk.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/tkinter/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="1282" selection-start-line="1282" selection-end-line="1282" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RNDGraph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="-712">
+          <caret line="49" column="28" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GraphColoring.py">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="97" column="23" selection-start-line="97" selection-start-column="23" selection-end-line="97" selection-end-column="23" />
-          <folding>
-            <element signature="e#153#184#0" expanded="true" />
-            <marker date="1555203538173" expanded="true" signature="263:378" ph="..." />
-            <marker date="1555203538173" expanded="true" signature="2826:2827" ph="..." />
-            <marker date="1555203538173" expanded="true" signature="2972:2973" ph="..." />
-            <marker date="1555203538173" expanded="true" signature="2972:2978" ph="..." />
-          </folding>
+        <state relative-caret-position="325">
+          <caret line="340" column="26" selection-start-line="340" selection-start-column="26" selection-end-line="340" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageMode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="47" column="36" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Interface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="194" column="44" lean-forward="true" selection-start-line="194" selection-start-column="44" selection-end-line="194" selection-end-column="44" />
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1555292187547" expanded="true" signature="6681:6690" ph="..." />
+            <marker date="1555460573922" expanded="true" signature="409:414" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphColoring.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1508">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#153#184#0" expanded="true" />
+            <marker date="1555460573912" expanded="true" signature="2776:2888" ph="..." />
           </folding>
         </state>
       </provider>

@@ -8,3 +8,4 @@ graph.txt
 .idea/FYP.iml
 .idea/workspace.xml
 __pycache__/Interface.cpython-37.pyc
+*.gif

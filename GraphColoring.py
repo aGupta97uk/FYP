@@ -8,6 +8,7 @@ from Interface import *
 from tkinter import messagebox
 
 
+
 def get_gc(self):
     graph = my_graph()
     col_list = welsh_powell(graph)
@@ -18,8 +19,7 @@ def get_gc(self):
 def my_graph():
     # Empty NetworkX graph
     graph = nx.Graph()
-
-    # open the file for reading
+    # Open the file for reading
     file = open("Random Graph.txt", "r")
     # Read info from the file line by line.
     # This is needed because there can be 2-5 characters (including one space).
@@ -89,12 +89,20 @@ def draw_graph(self, graph, col_list):
 
     num_colors(self)
 
+    return val
+
+
+def colors_used(self):
+
+    self.redirect("Num colors used to color all Vertices: ")
+    self.redirect(val)
+    self.redirect("\n")
+
 
 # Print out the number of distinct colours used to color the graph
 def num_colors(self):
 
-    self.redirect("Num colors used to color all Vertices: ")
-    self.redirect(val)
+    self.redirect("The algorithm was successfully run.")
     self.redirect("\n")
 
 
@@ -118,5 +126,4 @@ def check_num_colors_answer(self):
     except ValueError:
         messagebox.showerror("INPUT ERROR", "A number must be entered.")
         self.redirect("INPUT ERROR: A number must be entered.\n")
-
 
