@@ -8,7 +8,6 @@ from Interface import *
 from tkinter import messagebox
 
 
-
 def get_gc(self):
     graph = my_graph()
     col_list = welsh_powell(graph)

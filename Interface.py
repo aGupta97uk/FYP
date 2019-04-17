@@ -233,15 +233,16 @@ class Window:
         graph_coloring.state('zoomed')
         graph_coloring.focus_force()
 
-        self.main_container = tk.Frame(graph_coloring, background="green")
+        self.main_container = tk.Frame(graph_coloring, background="light grey")
         self.main_container.pack(side="top", fill="both", expand=True)
 
         self.button_quit = tk.Button(self.main_container, text="Quit", bd=3, command=lambda: close_window())
-        self.button_quit.pack(side="top", anchor="e", padx=10, pady=(10, 0))
+        self.button_quit.pack(side="top", anchor="e", padx=10, pady=(10, 10))
 
         alg_lab = "Welsh Powell Algorithm"
-        self.alg_text = tk.Message(self.main_container, text=alg_lab, width=500, font=60, background="grey")
-        self.alg_text.pack(side="top", anchor="center", fill="both", padx=10, pady=10)
+        self.alg_text = tk.Message(self.main_container, text=alg_lab, width=500, font=24,
+                                   relief="ridge", bd=20, borderwidth=3)
+        self.alg_text.pack(side="top", anchor="center", fill="both", padx=10, pady=(0, 0))
 
         alg = 'Step 1: Find the degree of each vertex.\n' \
               'Step 2: List the vertices in descending order of degrees.\n' \
@@ -251,55 +252,89 @@ class Window:
               'Step 5: Repeat step 3 and 4 with a new colour until all vertices are\n' \
               "              "'colored.'
         self.alg = tk.Message(self.main_container, text=alg, width=500, font=30,
-                              background="light grey", justify="left")
-        self.alg.pack(side="top", anchor="center", fill="both", padx=10, pady=10)
+                              background="light grey", justify="left", relief="ridge", bd=20, borderwidth=3)
+        self.alg.pack(side="top", anchor="center", fill="both", padx=10, pady=(0, 0))
 
-        self.demo_lab = tk.Label(self.main_container, text="Demo", width=500, font=60, background="grey")
-        self.demo_lab.pack(side="top", anchor="center", fill="both", padx=10, pady=10)
+        self.demo_lab = tk.Label(self.main_container, text="Demo", width=500, font=18,
+                                 relief="ridge", bd=20, borderwidth=3)
+        self.demo_lab.pack(side="top", anchor="center", fill="both", padx=10, pady=(10, 0))
 
         # Canvas for the image
-        self.left = tk.Frame(self.main_container, background="blue")
-        self.left.pack(side="left", anchor="center", fill="both", padx=10, pady=10, expand=True)
+        self.left = tk.Frame(self.main_container)
+        self.left.pack(side="left", anchor="center", fill="both", padx=10, pady=(0, 10), expand=True)
 
-        # Graph Image Canvas---------------------------------------------------------------------
-        self.graph_canvas = tk.Canvas(self.left, background="brown")
+        self.graph_canvas = tk.Canvas(self.left)
         self.graph_canvas.pack(side="top", fill="both", expand=True)
 
-        self.right = tk.Frame(self.main_container, background="white")
-        self.right.pack(side="right", anchor="center", fill="both", padx=10, pady=10, expand=True)
+        self.right = tk.Frame(self.main_container, background="white", relief="ridge", bd=20, borderwidth=3)
+        self.right.pack(side="right", anchor="center", fill="both", padx=10, pady=(0, 10), expand=True)
 
-        # Explanation Area----------------------------------------------------------------------
-        self.exp = tk.Frame(self.right, background="purple")
+        self.exp = tk.Frame(self.right, relief="ridge", bd=20, borderwidth=3)
         self.exp.pack(side="top", anchor="center", fill="both", expand=True)
 
+        # ----------------------------------------------------------------------------------------------------
+        step_1 = 'First, we find the degree of all vertices in the graph.\n' \
+                 'This adjacency matrix shows the degree of each vertex in the graph.'
+        self.step_1 = tk.Message(self.exp, text=step_1, width=500, font=30, justify="left", relief="ridge", bd=20,
+                                 borderwidth=3)
+
+        step_2 = 'We find the vertex with the highest degree. In this case vertex 6 has the highest degree of 5.\n ' \
+                 'Vertex 6 is colored in first.'
+        self.step_2 = tk.Message(self.exp, text=step_2, width=500, font=30, justify="left", relief="ridge", bd=20,
+                                 borderwidth=3)
+
+        step_3 = 'Next, all the vertices not adjacent to vertex 6 are colored in with the same color.'
+        self.step_3 = tk.Message(self.exp, text=step_3, width=500, font=30, justify="left", relief="ridge", bd=20,
+                                 borderwidth=3)
+
+        step_4 = 'Now we repeat step 2. Here, you notice several vertices have the same highest degree.\n' \
+                 'In this case, we just pick the first one in the list.\n' \
+                 'We color vertex 2 with a second color.'
+        self.step_4 = tk.Message(self.exp, text=step_4, width=500, font=30, justify="left", relief="ridge", bd=20,
+                                 borderwidth=3)
+
+        step_5 = 'Now we repeat step 3. Next, all the vertices not adjacent to vertex 2 are colored in with\n' \
+                 'the same color.'
+        self.step_5 = tk.Message(self.exp, text=step_5, width=500, font=30, justify="left", relief="ridge", bd=20,
+                                 borderwidth=3)
+
+        step_6 = 'Again, we repeat step 2. Here, you notice several vertices have the same highest degree.\n' \
+                 'Again, we just pick the first one in the list.\n' \
+                 'We color vertex 3 with a third color.'
+        self.step_6 = tk.Message(self.exp, text=step_6, width=500, font=30, justify="left", relief="ridge", bd=20,
+                                 borderwidth=3)
+
+        step_7 = 'Again, we repeat step 3. Next, all the vertices not adjacent to vertex 3 are colored in with\n' \
+                 'the same color.'
+        self.step_7 = tk.Message(self.exp, text=step_7, width=500, font=30, justify="left", relief="ridge", bd=20,
+                                 borderwidth=3)
+        # ----------------------------------------------------------------------------------------------------
+        self.steps = tk.Frame(self.exp, relief="groove", bd=20, borderwidth=3)
+        self.steps.pack(side="bottom", anchor="s", fill="x", expand=True)
+
         # Button to show the images in an order
-        self.button_step_one = tk.Button(self.exp, text="Step 1", bd=3, command=lambda: self.step_one())
-        self.button_step_one.pack(side="left", anchor="n", padx=10, pady=10, expand=True)
+        self.button_step_one = tk.Button(self.steps, text="Step 1", bd=3, command=lambda: self.step_one())
+        self.button_step_one.pack(side="left", anchor="n", padx=10, expand=True)
 
-        self.button_step_two = tk.Button(self.exp, text="Step 2", bd=3, command=lambda: self.step_two())
-        self.button_step_two.pack(side="left", anchor="n", padx=10, pady=10, expand=True)
+        self.button_step_three = tk.Button(self.steps, text="Step 2", bd=3, command=lambda: self.step_two())
+        self.button_step_three.pack(side="left", anchor="n", padx=10, expand=True)
 
-        # Edit
-        self.button_step_three = tk.Button(self.exp, text="Step 3", bd=3, command=lambda: self.step_three())
-        self.button_step_three.pack(side="left", anchor="n", padx=10, pady=10, expand=True)
+        self.button_step_four = tk.Button(self.steps, text="Step 3", bd=3, command=lambda: self.step_three())
+        self.button_step_four.pack(side="left", anchor="n", padx=10, expand=True)
 
-        self.button_step_four = tk.Button(self.exp, text="Step 4", bd=3, command=lambda: self.step_four())
-        self.button_step_four.pack(side="left", anchor="n", padx=10, pady=10, expand=True)
+        self.button_step_five = tk.Button(self.steps, text="Step 4", bd=3, command=lambda: self.step_four())
+        self.button_step_five.pack(side="left", anchor="n", padx=10, expand=True)
 
-        self.button_step_five = tk.Button(self.exp, text="Step 5", bd=3, command=lambda: self.step_five())
-        self.button_step_five.pack(side="left", anchor="n", padx=10, pady=10, expand=True)
+        self.button_step_six = tk.Button(self.steps, text="Step 5", bd=3, command=lambda: self.step_five())
+        self.button_step_six.pack(side="left", anchor="n", padx=10, expand=True)
 
-        self.button_step_six = tk.Button(self.exp, text="Step 6", bd=3, command=lambda: self.step_six())
-        self.button_step_six.pack(side="left", anchor="n", padx=10, pady=10, expand=True)
+        self.button_step_seven = tk.Button(self.steps, text="Step 6", bd=3, command=lambda: self.step_six())
+        self.button_step_seven.pack(side="left", anchor="n", padx=10, expand=True)
 
-        self.button_step_seven = tk.Button(self.exp, text="Step 7", bd=3, command=lambda: self.step_seven())
-        self.button_step_seven.pack(side="left", anchor="n", padx=10, pady=10, expand=True)
+        self.button_step_eight = tk.Button(self.steps, text="Step 7", bd=3, command=lambda: self.step_seven())
+        self.button_step_eight.pack(side="left", anchor="n", padx=10, expand=True)
 
-        self.button_step_eight = tk.Button(self.exp, text="Step 8", bd=3, command=lambda: self.step_eight())
-        self.button_step_eight.pack(side="left", anchor="n", padx=10, pady=10, expand=True)
-
-        # Adjacency Matrix Image Canvas---------------------------------------------------------
-        self.adj_matrix_canvas = tk.Canvas(self.right, background="blue")
+        self.adj_matrix_canvas = tk.Canvas(self.right, relief="ridge", bd=20, borderwidth=3)
         self.adj_matrix_canvas.pack(side="bottom", anchor="center", fill="both", expand=True)
 
         graph_coloring.mainloop()
@@ -343,49 +378,18 @@ class Window:
         self.img_adj_matrix.image = self.render_adj_matrix
         self.img_adj_matrix.place(x=0, y=0)
 
+        self.step_1.pack_forget()
+        self.step_2.pack_forget()
+        self.step_3.pack_forget()
+        self.step_4.pack_forget()
+        self.step_5.pack_forget()
+        self.step_6.pack_forget()
+        self.step_7.pack_forget()
+        self.step_1.pack(side="top", fill="both", expand=False)
+
         return self.render_graph, self.render_adj_matrix
 
     def step_two(self):
-
-        global left_height
-        left_height = self.left.winfo_height()
-
-        global left_width
-        left_width = self.left.winfo_width()
-
-        global right_height
-        right_height = self.adj_matrix_canvas.winfo_height()
-
-        global right_width
-        right_width = self.adj_matrix_canvas.winfo_width()
-
-        # Loading all the graph images
-        load_graph_image = Image.open("C:/Users/AG/PycharmProjects/FYP/Assets/Graphv2.0.gif")
-        # Get frame size
-        load_graph_image = load_graph_image.resize((left_width, left_height))
-
-        # Loading adjacency matrix images
-        load_adj_mat_image = Image.open("C:/Users/AG/PycharmProjects/FYP/Assets/AdjacencyMatrixv2.0.gif")
-        # Get frame size
-        load_adj_mat_image = load_adj_mat_image.resize((right_width, right_height))
-
-        # Render graph Images
-        self.render_graph = ImageTk.PhotoImage(load_graph_image)
-        # Displaying the graph image
-        self.img_graph = tk.Label(self.left, image=self.render_graph)
-        self.img_graph.image = self.render_graph
-        self.img_graph.place(x=0, y=0)
-
-        # Render Adjacency matrix images
-        self.render_adj_matrix = ImageTk.PhotoImage(load_adj_mat_image)
-        # Displaying the adjacency matrix images
-        self.img_adj_matrix = tk.Label(self.adj_matrix_canvas, image=self.render_adj_matrix)
-        self.img_adj_matrix.image = self.render_adj_matrix
-        self.img_adj_matrix.place(x=0, y=0)
-
-        return self.render_graph, self.render_adj_matrix
-
-    def step_three(self):
 
         global left_height
         left_height = self.left.winfo_height()
@@ -423,9 +427,18 @@ class Window:
         self.img_adj_matrix.image = self.render_adj_matrix
         self.img_adj_matrix.place(x=0, y=0)
 
+        self.step_1.pack_forget()
+        self.step_2.pack_forget()
+        self.step_3.pack_forget()
+        self.step_4.pack_forget()
+        self.step_5.pack_forget()
+        self.step_6.pack_forget()
+        self.step_7.pack_forget()
+        self.step_2.pack(side="top", fill="both", expand=False)
+
         return self.render_graph, self.render_adj_matrix
 
-    def step_four(self):
+    def step_three(self):
 
         global left_height
         left_height = self.left.winfo_height()
@@ -463,9 +476,18 @@ class Window:
         self.img_adj_matrix.image = self.render_adj_matrix
         self.img_adj_matrix.place(x=0, y=0)
 
+        self.step_1.pack_forget()
+        self.step_2.pack_forget()
+        self.step_3.pack_forget()
+        self.step_4.pack_forget()
+        self.step_5.pack_forget()
+        self.step_6.pack_forget()
+        self.step_7.pack_forget()
+        self.step_3.pack(side="top", fill="both", expand=False)
+
         return self.render_graph, self.render_adj_matrix
 
-    def step_five(self):
+    def step_four(self):
 
         global left_height
         left_height = self.left.winfo_height()
@@ -503,9 +525,18 @@ class Window:
         self.img_adj_matrix.image = self.render_adj_matrix
         self.img_adj_matrix.place(x=0, y=0)
 
+        self.step_1.pack_forget()
+        self.step_2.pack_forget()
+        self.step_3.pack_forget()
+        self.step_4.pack_forget()
+        self.step_5.pack_forget()
+        self.step_6.pack_forget()
+        self.step_7.pack_forget()
+        self.step_4.pack(side="top", fill="both", expand=False)
+
         return self.render_graph, self.render_adj_matrix
 
-    def step_six(self):
+    def step_five(self):
 
         global left_height
         left_height = self.left.winfo_height()
@@ -543,9 +574,18 @@ class Window:
         self.img_adj_matrix.image = self.render_adj_matrix
         self.img_adj_matrix.place(x=0, y=0)
 
+        self.step_1.pack_forget()
+        self.step_2.pack_forget()
+        self.step_3.pack_forget()
+        self.step_4.pack_forget()
+        self.step_5.pack_forget()
+        self.step_6.pack_forget()
+        self.step_7.pack_forget()
+        self.step_5.pack(side="top", fill="both", expand=False)
+
         return self.render_graph, self.render_adj_matrix
 
-    def step_seven(self):
+    def step_six(self):
 
         global left_height
         left_height = self.left.winfo_height()
@@ -583,9 +623,18 @@ class Window:
         self.img_adj_matrix.image = self.render_adj_matrix
         self.img_adj_matrix.place(x=0, y=0)
 
+        self.step_1.pack_forget()
+        self.step_2.pack_forget()
+        self.step_3.pack_forget()
+        self.step_4.pack_forget()
+        self.step_5.pack_forget()
+        self.step_6.pack_forget()
+        self.step_7.pack_forget()
+        self.step_6.pack(side="top", fill="both", expand=False)
+
         return self.render_graph, self.render_adj_matrix
 
-    def step_eight(self):
+    def step_seven(self):
 
         global left_height
         left_height = self.left.winfo_height()
@@ -622,6 +671,15 @@ class Window:
         self.img_adj_matrix = tk.Label(self.adj_matrix_canvas, image=self.render_adj_matrix)
         self.img_adj_matrix.image = self.render_adj_matrix
         self.img_adj_matrix.place(x=0, y=0)
+
+        self.step_1.pack_forget()
+        self.step_2.pack_forget()
+        self.step_3.pack_forget()
+        self.step_4.pack_forget()
+        self.step_5.pack_forget()
+        self.step_6.pack_forget()
+        self.step_7.pack_forget()
+        self.step_7.pack(side="top", fill="both", expand=False)
 
         return self.render_graph, self.render_adj_matrix
 
