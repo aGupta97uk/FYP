@@ -39,8 +39,6 @@ class Window:
         self.right_frame.grid_columnconfigure(0, weight=1)
         self.right_frame.grid_propagate(0)
 
-        # LabelFrame - Generate Random Graph
-        # FIXME: The font size - not changing
         self.lab_grg = tk.LabelFrame(master=self.right_frame2_top, text="Generate Random Graph", font="10")
         self.lab_grg.grid(row=0, column=0, padx=10, pady=10, sticky="nsew")
         self.right_frame2_top.rowconfigure(0, weight=1)
@@ -60,7 +58,6 @@ class Window:
         self.entry_nov.grid_rowconfigure(1, weight=1)
 
         # Label - Number of Edges
-        # FIXME: BUG - Font size not changing
         self.lab_noe = tk.Label(self.lab_grg, text="Number of Edges:",
                                 font="14")
         self.lab_noe.grid(row=2, column=0, pady=5, in_=self.lab_grg, sticky="e")
@@ -160,7 +157,7 @@ class Window:
         self.lab_gc.grid_propagate(False)
 
         # Make this create a new Window and present the algorithm in that window
-        self.btn_info = tk.Button(self.lab_gc, text="How it works", bd=3, command=lambda: self.how_it_works())
+        self.btn_info = tk.Button(self.lab_gc, text="Learn Algorithm", bd=3, command=lambda: self.how_it_works())
         self.btn_info.grid(row=5, column=0, padx=10, pady=10, sticky="w")
         self.lab_gc.rowconfigure(0, weight=1)
         self.lab_gc.columnconfigure(0, weight=1)
@@ -199,7 +196,6 @@ class Window:
 
         self.right_frame2_top_gc.grid_forget()
 
-        # Repeated Code here. Find a better way to do grid (remember)
         self.right_frame2_top.grid(row=0, column=0, sticky="nsew")
         self.right_frame.grid_rowconfigure(0, weight=1)
         self.right_frame.grid_columnconfigure(0, weight=1)

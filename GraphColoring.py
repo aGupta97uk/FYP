@@ -68,6 +68,7 @@ def draw_graph(self, graph, col_list):
     # NetworkX Graph
     pos = nx.spring_layout(graph)
     # List of colors to color nodes
+    global values
     values = [col_list.get(node, "yellow") for node in graph.nodes()]
     # Draw Graph
     nx.draw(graph, pos, ax=self.ax, node_size=700, node_color=values)
@@ -87,8 +88,9 @@ def draw_graph(self, graph, col_list):
     val = len(set(values))
 
     num_colors(self)
+    self.redirect(val)
 
-    return val
+    return val, values
 
 
 def colors_used(self):
@@ -101,8 +103,8 @@ def colors_used(self):
 # Print out the number of distinct colours used to color the graph
 def num_colors(self):
 
-    self.redirect("The algorithm was successfully run.")
-    self.redirect("\n")
+    self.redirect("The algorithm was successfully run.\n")
+    self.redirect("This is one possible solution..\n")
 
 
 def check_num_colors_answer(self):
